@@ -1,0 +1,72 @@
+body {
+font-family: 'Helvetica';
+}
+.card {
+    display: flex;
+}
+.card-text {
+    justify-content: flex-start;
+    margin: auto;
+}
+.filter-buttons {
+display: flex;
+margin-bottom: 20px;
+justify-content: flex-end;
+}
+
+.list-view-button,
+.grid-view-button {
+color: #5a5a5a;
+border: none;
+background: white;
+padding: 5px;
+font-size: 14px;
+cursor: pointer;
+}
+
+.list-view-button:hover,
+.grid-view-button:hover,
+.list-view-button:active,
+.grid-view-button:active {
+background: #f8f9fa;
+color: #0e2439;
+}
+
+.list-view-button {
+margin-right: 10px;
+}
+
+.list {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+li {
+background-color: #f8f9fa;
+color: #5a5a5a;
+border-radius: 3px;
+margin-bottom: 10px;
+transition: 0.3s;
+}
+
+
+.list.list-view-filter {
+flex-direction: column;
+}
+
+.list.list-view-filter li {
+padding: 10px;
+}
+
+.list.grid-view-filter {
+flex-flow: row wrap;
+}
+
+.list.grid-view-filter li {
+width: calc(50% - 210px);
+padding: 100px;
+margin-right: 10px;
+text-align: center;
+}

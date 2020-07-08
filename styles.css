@@ -23,70 +23,10 @@ h2 {
     margin-right: 10px;
     justify-content: flex-end;
 }
-.grid-view-filter .card {
-    justify-content: center;
-    flex-direction: column;
-}
-.list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-li {
-    /* background-color: #f8f9fa; */
-    border: 1px solid rgba(90,90,90, .2);
-    color: #5a5a5a;
-    border-radius: 3px;
-    margin-bottom: 10px;
-    transition: 0.3s;
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(90,90,90,0.07);
-    -moz-box-shadow: 5px 5px 5px 0px rgba(90,90,90,0.07);
-    box-shadow: 5px 5px 5px 0px rgba(90,90,90,0.07);
-}
-.list.list-view-filter {
-    flex-direction: column;
-}
-.list.list-view-filter li {
-    padding: 10px;
-}
-.list.grid-view-filter {
-    flex-flow: row wrap;
-}
-.list.grid-view-filter li {
-    width: auto;
-    padding: 30px;
-    margin-right: 10px;
-    text-align: center;
-}
-.list-view-filter .card-text {
-    justify-content: flex-start;
-    margin: 20px 20px;
-}
-.list-view-button,
-.grid-view-button {
-    color: #5a5a5a;
-    border: none;
-    background: white;
-    padding: 5px;
-    font-size: 14px;
-    cursor: pointer;
-}
-.list-view-button {
-    margin-right: 10px;
-}
-.list-view-button:hover,
-.grid-view-button:hover,
-.list-view-button:active,
-.grid-view-button:active {
-    background: #f8f9fa;
-    color: #0e2439;
-}
-
 .grid-list {
     --color: #f6f8ff;
     --background: #f8f9fa;
-    --background-hover: #1e2235;
+    --background-hover: rgba(90,90,90, 0.2);
     --icon-color: #5a5a5a;
     padding: 6px 12px 6px 8px;
     margin: 0;
@@ -108,12 +48,10 @@ li {
 .grid-list:hover {
     --b: var(--background-hover);
 }
-/* .grid-list.without-text {
-    --background: #275efe;
-    --background-hover: #1548db;
-    --icon-color: #fff;
-    padding: 6px;
-} */
+.grid-view-filter .card {
+    justify-content: center;
+    flex-direction: column;
+}
 .grid-list .icon {
     width: 24px;
     height: 24px;
@@ -248,6 +186,71 @@ li {
 .grid-list.animation.active .lines i:nth-child(3), .grid-list.animation.active .lines i:nth-child(4) {
     transform-origin: 0 50%;
 }
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+li {
+    /* background-color: #f8f9fa; */
+    border: 1px solid rgba(90,90,90, .2);
+    color: #5a5a5a;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(90,90,90,0.07);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(90,90,90,0.07);
+    box-shadow: 5px 5px 5px 0px rgba(90,90,90,0.07);
+}
+.list.list-view-filter {
+    flex-direction: column;
+}
+.list.list-view-filter li {
+    padding: 20px;
+}
+.list.grid-view-filter {
+    flex-flow: row wrap;
+}
+.list.grid-view-filter li {
+    width: auto;
+    padding: 30px;
+    margin-right: 10px;
+    text-align: center;
+}
+.list-view-filter .card-text {
+    justify-content: flex-start;
+    margin: 20px 20px;
+}
+/* Styles for 2 buttons view
+
+.list-view-button,
+.grid-view-button {
+    color: #5a5a5a;
+    border: none;
+    background: white;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.list-view-button {
+    margin-right: 10px;
+} 
+ .list-view-button:hover,
+.grid-view-button:hover,
+.list-view-button:active,
+.grid-view-button:active {
+    background: #f8f9fa;
+    color: #0e2439;
+} 
+ .grid-list.without-text {
+    --background: #275efe;
+    --background-hover: #1548db;
+    --icon-color: #fff;
+    padding: 6px;
+} 
+*/
+
 @keyframes text {
     0% {
         opacity: var(--o-active);
@@ -301,18 +304,3 @@ li {
    }
 }
 
-body .dribbble img {
-    display: block;
-    height: 28px;
-}
-body .twitter {
-    position: fixed;
-    display: block;
-    right: 64px;
-    bottom: 14px;
-}
-body .twitter svg {
-    width: 32px;
-    height: 32px;
-    fill: #1da1f2;
-}

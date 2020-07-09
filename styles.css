@@ -1,21 +1,47 @@
+h2 {
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+h4 {
+    font-size: 0.8em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+p {
+    font-size: 0.8em;
+}
 body {
     font-family: 'Montserrat', sans-serif;
 }
-h2 {
-    text-transform: uppercase;
+button {
+    color: var(--color);
+    background-color: var(--background);
+    border-color: var(--background);
+    border-radius: 4px;
+    padding: 9px;
+    font-size: 1rem;
+}
+.buy button i {
+    padding-right: 4px;
 }
 .card {
     display: flex;
     flex: 1 1 auto;
-    flex-wrap: wrap;
 }
 .container {
-    max-width: 80vw;
     margin: auto;
 }
 .container .grid-view-filter {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(250px, 2fr));
+    grid-template-columns: repeat(auto-fill,minmax(300px, 2fr));
 }
 .filter-buttons {
     display: flex;
@@ -186,6 +212,16 @@ h2 {
 .grid-list.animation.active .lines i:nth-child(3), .grid-list.animation.active .lines i:nth-child(4) {
     transform-origin: 0 50%;
 }
+
+.list-view-filter img {
+    border-radius: 9px;
+}
+.list-view-filter .buy {
+    float: right;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 3px;
+}
 .list {
     list-style: none;
     margin: 0;
@@ -196,7 +232,7 @@ li {
     /* background-color: #f8f9fa; */
     border: 1px solid rgba(90,90,90, .2);
     color: #5a5a5a;
-    border-radius: 3px;
+    border-radius: 10px;
     margin-bottom: 10px;
     transition: 0.3s;
     -webkit-box-shadow: 5px 5px 5px 0px rgba(90,90,90,0.07);
@@ -206,9 +242,6 @@ li {
 .list.list-view-filter {
     flex-direction: column;
 }
-.list.list-view-filter li {
-    padding: 20px;
-}
 .list.grid-view-filter {
     flex-flow: row wrap;
 }
@@ -217,39 +250,63 @@ li {
     padding: 30px;
     margin-right: 10px;
     text-align: center;
+    width: 60%;
+    margin: 5px auto;
 }
 .list-view-filter .card-text {
     justify-content: flex-start;
-    margin: 20px 20px;
+    margin-left: 10px;
+    width: 70%;
 }
-/* Styles for 2 buttons view
 
-.list-view-button,
-.grid-view-button {
-    color: #5a5a5a;
-    border: none;
-    background: white;
-    padding: 5px;
-    font-size: 14px;
-    cursor: pointer;
+@media (min-width: 481px) and (max-width:768px){
+    h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+    h4 {
+        display: block;
+        margin-block-start: 1.33em;
+        margin-block-end: 1.33em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-size: 1em;
+    }
+    .card-text p {
+        display: block;
+    }
+    .list-view-filter .buy {
+        margin-right: 2%;
+    }
+    .list.grid-view-filter li {
+        width: 60%;
+        margin: 10px auto;
+    }
 }
-.list-view-button {
-    margin-right: 10px;
-} 
- .list-view-button:hover,
-.grid-view-button:hover,
-.list-view-button:active,
-.grid-view-button:active {
-    background: #f8f9fa;
-    color: #0e2439;
-} 
- .grid-list.without-text {
-    --background: #275efe;
-    --background-hover: #1548db;
-    --icon-color: #fff;
-    padding: 6px;
-} 
-*/
+@media (min-width: 769px) and (max-width:1024px) {
+    .list-view-filter .card-text {
+        margin-left: 40px;
+    }
+}
+@media (min-width: 1025px) {
+    .list-view-filter .card-text {
+        margin-left: 5%;
+    }
+}
+
 
 @keyframes text {
     0% {
@@ -304,3 +361,35 @@ li {
    }
 }
 
+
+
+
+
+/* Styles for 2 buttons view
+
+.list-view-button,
+.grid-view-button {
+    color: #5a5a5a;
+    border: none;
+    background: white;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.list-view-button {
+    margin-right: 10px;
+} 
+ .list-view-button:hover,
+.grid-view-button:hover,
+.list-view-button:active,
+.grid-view-button:active {
+    background: #f8f9fa;
+    color: #0e2439;
+} 
+ .grid-list.without-text {
+    --background: #275efe;
+    --background-hover: #1548db;
+    --icon-color: #fff;
+    padding: 6px;
+} 
+*/

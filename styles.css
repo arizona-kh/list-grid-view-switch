@@ -24,10 +24,15 @@ body {
 button {
     color: var(--color);
     background-color: var(--background);
-    border-color: var(--background);
     border-radius: 4px;
     padding: 9px;
     font-size: 1rem;
+    border: 1px solid #f4f4fa;
+}
+.buy button:hover {
+    background-color: #f4f4fa;
+    border-color:  #f4f4fa;
+    cursor: pointer;
 }
 .buy button i {
     padding-right: 4px;
@@ -35,6 +40,19 @@ button {
 .card {
     display: flex;
     flex: 1 1 auto;
+}
+.card-media {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+}
+.card-media img {
+    width: auto;
+    height: auto;
+}
+.object-fit {
+    object-fit: fill;
 }
 .container {
     margin: auto;
